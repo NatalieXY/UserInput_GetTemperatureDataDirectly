@@ -1,0 +1,149 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/Xingyu/Desktop/Android/EverythingOldVersion_WithFullLEDControls/Application/src/main/AndroidManifest.xml:16:1-70:12
+	package
+		ADDED from /Users/Xingyu/Desktop/Android/EverythingOldVersion_WithFullLEDControls/Application/src/main/AndroidManifest.xml:17:5-50
+	android:versionName
+		ADDED from /Users/Xingyu/Desktop/Android/EverythingOldVersion_WithFullLEDControls/Application/src/main/AndroidManifest.xml:19:5-30
+		INJECTED from /Users/Xingyu/Desktop/Android/EverythingOldVersion_WithFullLEDControls/Application/src/main/AndroidManifest.xml
+		INJECTED from /Users/Xingyu/Desktop/Android/EverythingOldVersion_WithFullLEDControls/Application/src/main/AndroidManifest.xml
+	android:versionCode
+		ADDED from /Users/Xingyu/Desktop/Android/EverythingOldVersion_WithFullLEDControls/Application/src/main/AndroidManifest.xml:18:5-28
+		INJECTED from /Users/Xingyu/Desktop/Android/EverythingOldVersion_WithFullLEDControls/Application/src/main/AndroidManifest.xml
+		INJECTED from /Users/Xingyu/Desktop/Android/EverythingOldVersion_WithFullLEDControls/Application/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/Xingyu/Desktop/Android/EverythingOldVersion_WithFullLEDControls/Application/src/main/AndroidManifest.xml:16:11-69
+uses-feature#android.hardware.bluetooth_le
+ADDED from /Users/Xingyu/Desktop/Android/EverythingOldVersion_WithFullLEDControls/Application/src/main/AndroidManifest.xml:30:5-32:35
+	android:required
+		ADDED from /Users/Xingyu/Desktop/Android/EverythingOldVersion_WithFullLEDControls/Application/src/main/AndroidManifest.xml:32:9-32
+	android:name
+		ADDED from /Users/Xingyu/Desktop/Android/EverythingOldVersion_WithFullLEDControls/Application/src/main/AndroidManifest.xml:31:9-53
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from /Users/Xingyu/Desktop/Android/EverythingOldVersion_WithFullLEDControls/Application/src/main/AndroidManifest.xml:33:5-81
+	android:name
+		ADDED from /Users/Xingyu/Desktop/Android/EverythingOldVersion_WithFullLEDControls/Application/src/main/AndroidManifest.xml:33:22-78
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from /Users/Xingyu/Desktop/Android/EverythingOldVersion_WithFullLEDControls/Application/src/main/AndroidManifest.xml:35:5-79
+	android:name
+		ADDED from /Users/Xingyu/Desktop/Android/EverythingOldVersion_WithFullLEDControls/Application/src/main/AndroidManifest.xml:35:22-76
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from /Users/Xingyu/Desktop/Android/EverythingOldVersion_WithFullLEDControls/Application/src/main/AndroidManifest.xml:36:5-81
+	android:name
+		ADDED from /Users/Xingyu/Desktop/Android/EverythingOldVersion_WithFullLEDControls/Application/src/main/AndroidManifest.xml:36:22-78
+uses-feature#android.hardware.location.gps
+ADDED from /Users/Xingyu/Desktop/Android/EverythingOldVersion_WithFullLEDControls/Application/src/main/AndroidManifest.xml:38:5-66
+	android:name
+		ADDED from /Users/Xingyu/Desktop/Android/EverythingOldVersion_WithFullLEDControls/Application/src/main/AndroidManifest.xml:38:19-63
+uses-permission#android.permission.BLUETOOTH
+ADDED from /Users/Xingyu/Desktop/Android/EverythingOldVersion_WithFullLEDControls/Application/src/main/AndroidManifest.xml:40:5-68
+	android:name
+		ADDED from /Users/Xingyu/Desktop/Android/EverythingOldVersion_WithFullLEDControls/Application/src/main/AndroidManifest.xml:40:22-65
+uses-permission#android.permission.BLUETOOTH_ADMIN
+ADDED from /Users/Xingyu/Desktop/Android/EverythingOldVersion_WithFullLEDControls/Application/src/main/AndroidManifest.xml:41:5-74
+	android:name
+		ADDED from /Users/Xingyu/Desktop/Android/EverythingOldVersion_WithFullLEDControls/Application/src/main/AndroidManifest.xml:41:22-71
+application
+ADDED from /Users/Xingyu/Desktop/Android/EverythingOldVersion_WithFullLEDControls/Application/src/main/AndroidManifest.xml:43:5-68:19
+MERGED from [com.android.support:support-v13:25.3.1] /Users/Xingyu/.android/build-cache/148b2eb0e15c3dc2281326c9a61bbf8f7134b70f/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:cardview-v7:25.3.1] /Users/Xingyu/.android/build-cache/74c4e7754d3a9c7a3c568e20035de147d2b1b39b/output/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:appcompat-v7:25.3.1] /Users/Xingyu/.android/build-cache/25040ccdf1ce2fae228a7c4c8b3d17296c4e8979/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-v4:25.3.1] /Users/Xingyu/.android/build-cache/f0571a8aa21e45b9aa5e377d10483d4143133aeb/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-fragment:25.3.1] /Users/Xingyu/.android/build-cache/2317985f066f59cba6c561ca6fa013c0ad37c201/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-media-compat:25.3.1] /Users/Xingyu/.android/build-cache/8d1883f70df3f23c0ce749099d18bfac72ab26e4/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-ui:25.3.1] /Users/Xingyu/.android/build-cache/452ba11c3ddfce5d254edfa8c1e9e3d395695ac4/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-utils:25.3.1] /Users/Xingyu/.android/build-cache/1155907a2e29b3330f38c11625e471598e7d5e15/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] /Users/Xingyu/.android/build-cache/3a221061cc6e36e2cf4d0b71dbcec53e7047eb75/output/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-vector-drawable:25.3.1] /Users/Xingyu/.android/build-cache/604c000c550716865c29c889b9d20fb94ffdfb2d/output/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-compat:25.3.1] /Users/Xingyu/.android/build-cache/05fae164a3469d4e797254d251446e348c3e0e7e/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/Xingyu/.android/build-cache/0a153e2d293e6788b560f33c6d87578751212722/output/AndroidManifest.xml:9:5-20
+	android:label
+		ADDED from /Users/Xingyu/Desktop/Android/EverythingOldVersion_WithFullLEDControls/Application/src/main/AndroidManifest.xml:45:9-41
+	android:icon
+		ADDED from /Users/Xingyu/Desktop/Android/EverythingOldVersion_WithFullLEDControls/Application/src/main/AndroidManifest.xml:44:9-45
+	android:theme
+		ADDED from /Users/Xingyu/Desktop/Android/EverythingOldVersion_WithFullLEDControls/Application/src/main/AndroidManifest.xml:46:9-56
+activity#com.example.android.bluetoothlegatt.UserInputAddressActivity
+ADDED from /Users/Xingyu/Desktop/Android/EverythingOldVersion_WithFullLEDControls/Application/src/main/AndroidManifest.xml:48:9-56:20
+	android:label
+		ADDED from /Users/Xingyu/Desktop/Android/EverythingOldVersion_WithFullLEDControls/Application/src/main/AndroidManifest.xml:50:13-45
+	android:name
+		ADDED from /Users/Xingyu/Desktop/Android/EverythingOldVersion_WithFullLEDControls/Application/src/main/AndroidManifest.xml:49:13-53
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from /Users/Xingyu/Desktop/Android/EverythingOldVersion_WithFullLEDControls/Application/src/main/AndroidManifest.xml:51:13-55:29
+action#android.intent.action.MAIN
+ADDED from /Users/Xingyu/Desktop/Android/EverythingOldVersion_WithFullLEDControls/Application/src/main/AndroidManifest.xml:52:17-69
+	android:name
+		ADDED from /Users/Xingyu/Desktop/Android/EverythingOldVersion_WithFullLEDControls/Application/src/main/AndroidManifest.xml:52:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /Users/Xingyu/Desktop/Android/EverythingOldVersion_WithFullLEDControls/Application/src/main/AndroidManifest.xml:54:17-77
+	android:name
+		ADDED from /Users/Xingyu/Desktop/Android/EverythingOldVersion_WithFullLEDControls/Application/src/main/AndroidManifest.xml:54:27-74
+activity#com.example.android.bluetoothlegatt.DeviceScanActivity
+ADDED from /Users/Xingyu/Desktop/Android/EverythingOldVersion_WithFullLEDControls/Application/src/main/AndroidManifest.xml:57:9-80
+	android:exported
+		ADDED from /Users/Xingyu/Desktop/Android/EverythingOldVersion_WithFullLEDControls/Application/src/main/AndroidManifest.xml:57:54-77
+	android:name
+		ADDED from /Users/Xingyu/Desktop/Android/EverythingOldVersion_WithFullLEDControls/Application/src/main/AndroidManifest.xml:57:19-53
+activity#com.example.android.bluetoothlegatt.DeviceControlActivity
+ADDED from /Users/Xingyu/Desktop/Android/EverythingOldVersion_WithFullLEDControls/Application/src/main/AndroidManifest.xml:58:9-60:39
+	android:exported
+		ADDED from /Users/Xingyu/Desktop/Android/EverythingOldVersion_WithFullLEDControls/Application/src/main/AndroidManifest.xml:60:13-36
+	android:name
+		ADDED from /Users/Xingyu/Desktop/Android/EverythingOldVersion_WithFullLEDControls/Application/src/main/AndroidManifest.xml:59:13-50
+activity#com.example.android.bluetoothlegatt.AutoConnectActivity
+ADDED from /Users/Xingyu/Desktop/Android/EverythingOldVersion_WithFullLEDControls/Application/src/main/AndroidManifest.xml:61:9-81
+	android:exported
+		ADDED from /Users/Xingyu/Desktop/Android/EverythingOldVersion_WithFullLEDControls/Application/src/main/AndroidManifest.xml:61:55-78
+	android:name
+		ADDED from /Users/Xingyu/Desktop/Android/EverythingOldVersion_WithFullLEDControls/Application/src/main/AndroidManifest.xml:61:19-54
+activity#com.example.android.bluetoothlegatt.CtrlControlActivity
+ADDED from /Users/Xingyu/Desktop/Android/EverythingOldVersion_WithFullLEDControls/Application/src/main/AndroidManifest.xml:62:9-81
+	android:exported
+		ADDED from /Users/Xingyu/Desktop/Android/EverythingOldVersion_WithFullLEDControls/Application/src/main/AndroidManifest.xml:62:55-78
+	android:name
+		ADDED from /Users/Xingyu/Desktop/Android/EverythingOldVersion_WithFullLEDControls/Application/src/main/AndroidManifest.xml:62:19-54
+service#com.example.android.bluetoothlegatt.BluetoothLeService
+ADDED from /Users/Xingyu/Desktop/Android/EverythingOldVersion_WithFullLEDControls/Application/src/main/AndroidManifest.xml:64:9-66:38
+	android:enabled
+		ADDED from /Users/Xingyu/Desktop/Android/EverythingOldVersion_WithFullLEDControls/Application/src/main/AndroidManifest.xml:66:13-35
+	android:name
+		ADDED from /Users/Xingyu/Desktop/Android/EverythingOldVersion_WithFullLEDControls/Application/src/main/AndroidManifest.xml:65:13-47
+uses-sdk
+INJECTED from /Users/Xingyu/Desktop/Android/EverythingOldVersion_WithFullLEDControls/Application/src/main/AndroidManifest.xml reason: use-sdk injection requested
+MERGED from [com.android.support:support-v13:25.3.1] /Users/Xingyu/.android/build-cache/148b2eb0e15c3dc2281326c9a61bbf8f7134b70f/output/AndroidManifest.xml:21:5-23:55
+MERGED from [com.android.support:cardview-v7:25.3.1] /Users/Xingyu/.android/build-cache/74c4e7754d3a9c7a3c568e20035de147d2b1b39b/output/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:appcompat-v7:25.3.1] /Users/Xingyu/.android/build-cache/25040ccdf1ce2fae228a7c4c8b3d17296c4e8979/output/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:support-v4:25.3.1] /Users/Xingyu/.android/build-cache/f0571a8aa21e45b9aa5e377d10483d4143133aeb/output/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-fragment:25.3.1] /Users/Xingyu/.android/build-cache/2317985f066f59cba6c561ca6fa013c0ad37c201/output/AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-media-compat:25.3.1] /Users/Xingyu/.android/build-cache/8d1883f70df3f23c0ce749099d18bfac72ab26e4/output/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-core-ui:25.3.1] /Users/Xingyu/.android/build-cache/452ba11c3ddfce5d254edfa8c1e9e3d395695ac4/output/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-utils:25.3.1] /Users/Xingyu/.android/build-cache/1155907a2e29b3330f38c11625e471598e7d5e15/output/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] /Users/Xingyu/.android/build-cache/3a221061cc6e36e2cf4d0b71dbcec53e7047eb75/output/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:25.3.1] /Users/Xingyu/.android/build-cache/604c000c550716865c29c889b9d20fb94ffdfb2d/output/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-compat:25.3.1] /Users/Xingyu/.android/build-cache/05fae164a3469d4e797254d251446e348c3e0e7e/output/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/Xingyu/.android/build-cache/0a153e2d293e6788b560f33c6d87578751212722/output/AndroidManifest.xml:5:5-7:41
+	tools:overrideLibrary
+		ADDED from [com.android.support:support-v13:25.3.1] /Users/Xingyu/.android/build-cache/148b2eb0e15c3dc2281326c9a61bbf8f7134b70f/output/AndroidManifest.xml:23:9-52
+	android:targetSdkVersion
+		INJECTED from /Users/Xingyu/Desktop/Android/EverythingOldVersion_WithFullLEDControls/Application/src/main/AndroidManifest.xml
+		INJECTED from /Users/Xingyu/Desktop/Android/EverythingOldVersion_WithFullLEDControls/Application/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/Xingyu/Desktop/Android/EverythingOldVersion_WithFullLEDControls/Application/src/main/AndroidManifest.xml
+		INJECTED from /Users/Xingyu/Desktop/Android/EverythingOldVersion_WithFullLEDControls/Application/src/main/AndroidManifest.xml
+meta-data#android.support.VERSION
+ADDED from [com.android.support:support-v13:25.3.1] /Users/Xingyu/.android/build-cache/148b2eb0e15c3dc2281326c9a61bbf8f7134b70f/output/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:cardview-v7:25.3.1] /Users/Xingyu/.android/build-cache/74c4e7754d3a9c7a3c568e20035de147d2b1b39b/output/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:appcompat-v7:25.3.1] /Users/Xingyu/.android/build-cache/25040ccdf1ce2fae228a7c4c8b3d17296c4e8979/output/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-v4:25.3.1] /Users/Xingyu/.android/build-cache/f0571a8aa21e45b9aa5e377d10483d4143133aeb/output/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-fragment:25.3.1] /Users/Xingyu/.android/build-cache/2317985f066f59cba6c561ca6fa013c0ad37c201/output/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-media-compat:25.3.1] /Users/Xingyu/.android/build-cache/8d1883f70df3f23c0ce749099d18bfac72ab26e4/output/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-ui:25.3.1] /Users/Xingyu/.android/build-cache/452ba11c3ddfce5d254edfa8c1e9e3d395695ac4/output/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-utils:25.3.1] /Users/Xingyu/.android/build-cache/1155907a2e29b3330f38c11625e471598e7d5e15/output/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] /Users/Xingyu/.android/build-cache/3a221061cc6e36e2cf4d0b71dbcec53e7047eb75/output/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-vector-drawable:25.3.1] /Users/Xingyu/.android/build-cache/604c000c550716865c29c889b9d20fb94ffdfb2d/output/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-compat:25.3.1] /Users/Xingyu/.android/build-cache/05fae164a3469d4e797254d251446e348c3e0e7e/output/AndroidManifest.xml:25:5-27:34
+	android:value
+		ADDED from [com.android.support:support-v13:25.3.1] /Users/Xingyu/.android/build-cache/148b2eb0e15c3dc2281326c9a61bbf8f7134b70f/output/AndroidManifest.xml:27:9-31
+	android:name
+		ADDED from [com.android.support:support-v13:25.3.1] /Users/Xingyu/.android/build-cache/148b2eb0e15c3dc2281326c9a61bbf8f7134b70f/output/AndroidManifest.xml:26:9-47

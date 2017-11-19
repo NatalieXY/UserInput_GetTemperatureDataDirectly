@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="/Users/Xingyu/Downloads/AutoConnect_ManuallyControlledLed/BluetoothBasic/Application/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="d9cb43e4cd2b3a5551702b7e82663c9e7cbac730">
+        <dex dex="/Users/Xingyu/Downloads/AutoConnect_ManuallyControlledLed/BluetoothBasic/Application/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_a4ffa73b73c190b196af5448b7c22dff0e30370e/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Xingyu/Downloads/AutoConnect_ManuallyControlledLed/BluetoothBasic/Application/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="caff8e51a24901cfc9cd7e1cf83d84f4cb0c103b">
+        <dex dex="/Users/Xingyu/Downloads/AutoConnect_ManuallyControlledLed/BluetoothBasic/Application/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_3994008035a774771f69ed75bf6da97c627a2e05/classes.dex" />
+    </item>
+
+</items>

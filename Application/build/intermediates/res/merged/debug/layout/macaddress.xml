@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.05"
+        android:text="Please enter your target mac address"
+        android:textSize="24sp" />
+
+    <EditText
+        android:id="@+id/macAdd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+
+        android:inputType="textPersonName"
+        android:text="A0:E6:F8:95:3E:62" />
+
+    <Button
+        android:id="@+id/Enter"
+        style="@android:style/Widget.Button"
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+        android:elevation="0dp"
+        android:text="Button" />
+
+
+
+</LinearLayout>

@@ -1,0 +1,30 @@
+[
+    {
+        "merged": "/Users/Xingyu/Desktop/BluetoothBasic/Application/build/intermediates/res/merged/debug/drawable-xxhdpi/ic_launcher.png",
+        "source": "/Users/Xingyu/Desktop/BluetoothBasic/Application/src/main/res/drawable-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/Xingyu/Desktop/XZ/BluetoothBasic/Application/build/intermediates/res/merged/debug/drawable-xxhdpi/ic_launcher.png",
+        "source": "/Users/Xingyu/Desktop/XZ/BluetoothBasic/Application/src/main/res/drawable-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/Xingyu/Downloads/AutoConnect_ManuallyControlledLed/BluetoothBasic/Application/build/intermediates/res/merged/debug/drawable-xxhdpi/ic_launcher.png",
+        "source": "/Users/Xingyu/Downloads/AutoConnect_ManuallyControlledLed/BluetoothBasic/Application/src/main/res/drawable-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/Xingyu/Desktop/BluetoothBasic 4 2/Application/build/intermediates/res/merged/debug/drawable-xxhdpi/ic_launcher.png",
+        "source": "/Users/Xingyu/Desktop/BluetoothBasic 4 2/Application/src/main/res/drawable-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/Xingyu/Desktop/Android/BluetoothBasic 4 2/Application/build/intermediates/res/merged/debug/drawable-xxhdpi/ic_launcher.png",
+        "source": "/Users/Xingyu/Desktop/Android/BluetoothBasic 4 2/Application/src/main/res/drawable-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/Xingyu/Desktop/BluetoothBasic 4/Application/build/intermediates/res/merged/debug/drawable-xxhdpi/ic_launcher.png",
+        "source": "/Users/Xingyu/Desktop/BluetoothBasic 4/Application/src/main/res/drawable-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/Xingyu/Desktop/Android/EverythingOldVersion_WithFullLEDControls/Application/build/intermediates/res/merged/debug/drawable-xxhdpi/ic_launcher.png",
+        "source": "/Users/Xingyu/Desktop/Android/EverythingOldVersion_WithFullLEDControls/Application/src/main/res/drawable-xxhdpi/ic_launcher.png"
+    }
+]
