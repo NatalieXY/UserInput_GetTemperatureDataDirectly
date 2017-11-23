@@ -341,11 +341,11 @@ public class DeviceControlActivity extends Activity {
                 if ( gattCharacteristic.getUuid().equals(UUID.fromString(SampleGattAttributes.TEMPERATURE_MEASUREMENT))){
                     Log.e(TAG, "GattCharacteristics= " + gattCharacteristic.getUuid());
                     Intent intent = new Intent(DeviceControlActivity.this, AutoConnectActivity.class);
-                    intent.putExtra("character_id", "F000AA01-0451-4000-B000-000000000000");
-                    intent.putExtra("service_id", "F000AA00-0451-4000-B000-000000000000");
+                    intent.putExtra("character_id", gattCharacteristic.getUuid().toString());
+                    intent.putExtra("service_id", gattCharacteristic.getService().getUuid().toString());
                     intent.putExtra("address", mDeviceAddress);
-                    //intent.putExtra("ctrl2_character_id", gattCharacteristic.getUuid().toString());
-                    //intent.putExtra("ctrl2_service_id", gattCharacteristic.getService().getUuid().toString());
+                    intent.putExtra("ctrl2_character_id", "F0001112-0451-4000-B000-000000000000");
+                    intent.putExtra("ctrl2_service_id", "F0001110-0451-4000-B000-000000000000");
                     startActivity(intent);
                 }
                 //Log.e(TAG, "GattCharacteristics= " + gattCharacteristic.getUuid());

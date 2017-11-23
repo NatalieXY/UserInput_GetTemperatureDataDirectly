@@ -53,10 +53,14 @@ public class AutoConnectActivity extends Activity {
     private String address;
     private UUID serviceId;
     private UUID charId;
+    private UUID LEDserviceId;
+    private UUID LEDcharId;
 
     private TextView debugText;
     private Button startBtn;
     private Button stopBtn;
+    private Button LEDstartBtn;
+    private Button LEDstopBtn;
 
     private Timer timer = new Timer();
     //private boolean started = false;
@@ -64,18 +68,30 @@ public class AutoConnectActivity extends Activity {
     private String Entry;
     private File file;
     private boolean check=true;
-    /*
-    private int mConnectionState = STATE_DISCONNECTED;
-    private static final int STATE_DISCONNECTED = 0;
-    private static final int STATE_CONNECTING = 1;
-    private static final int STATE_CONNECTED = 2;
-    public final static String ACTION_GATT_CONNECTED =
-            "com.example.bluetooth.le.ACTION_GATT_CONNECTED";
-    public final static String ACTION_GATT_DISCONNECTED =
-            "com.example.bluetooth.le.ACTION_GATT_DISCONNECTED";
 
-*/
     private BluetoothLeService mBluetoothLeService;
+
+    public boolean turnLEDon()
+    {
+
+        byte[] value = {(byte)1};
+        characteristic.setValue(value);
+
+        boolean status = mBluetoothLeService.mBluetoothGatt.writeCharacteristic(characteristic);
+
+        return status;
+    }
+    public boolean turnLEDoff()
+    {
+
+        byte[] value = {(byte)0};
+        characteristic.setValue(value);
+
+        boolean status = mBluetoothLeService.mBluetoothGatt.writeCharacteristic(characteristic);
+
+        return !status;
+    }
+
 
     private TimerTask timerTask = new TimerTask() {
         @Override
@@ -178,7 +194,8 @@ public class AutoConnectActivity extends Activity {
         //Log.e(TAG, " serviceId: " + serviceId);
         charId = UUID.fromString(intent1.getStringExtra("character_id"));
         //Log.e(TAG, " charId: " + charId);
-
+        LEDserviceId = UUID.fromString(intent1.getStringExtra("ctrl2_service_id"));
+        LEDcharId = UUID.fromString(intent1.getStringExtra("ctrl2_character_id"));
 
         ((TextView)findViewById(R.id.address_txt)).setText(address);
         ((TextView)findViewById(R.id.service_txt)).setText(serviceId.toString());
@@ -186,6 +203,8 @@ public class AutoConnectActivity extends Activity {
         debugText = (TextView)findViewById(R.id.debug_txt);
         startBtn = (Button)findViewById(R.id.start_btn);
         stopBtn = (Button)findViewById(R.id.stop_btn);
+        LEDstartBtn = (Button)findViewById(R.id.ctrl_start_btn);
+        LEDstopBtn = (Button)findViewById(R.id.ctrl_stop_btn);
 
 
         ListView listView = (ListView)findViewById(R.id.result_list);
@@ -219,11 +238,6 @@ public class AutoConnectActivity extends Activity {
                 });
 
 
-
-        //startBtn.performClick();
-
-        //Log.e(TAG, " click??: " + startBtn.performClick());
-
         stopBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -235,6 +249,38 @@ public class AutoConnectActivity extends Activity {
 
                 timer.cancel();
                 mBluetoothLeService.disconnect();
+            }
+        });
+
+        LEDstartBtn.setOnClickListener(new View.OnClickListener()
+        {
+
+            @Override
+            public void onClick(View v)
+            {
+                mBluetoothLeService.connect(address);
+
+
+
+
+                Toast.makeText (getBaseContext(), "Turn CTRL ON", Toast.LENGTH_SHORT).show();
+                turnLEDon();
+                Log.e(TAG, " On?: " + turnLEDon());
+
+            }
+        });
+
+        LEDstopBtn.setOnClickListener(new View.OnClickListener() {
+            //mBluetoothLeService.connect(address);
+            @Override
+
+            public void onClick(View v) {
+                //mBluetoothLeService.connect(address);
+
+                turnLEDoff();
+                Log.e(TAG, " Off?: " + turnLEDoff());
+                Toast.makeText (getBaseContext(), "Turn CTRL OFF", Toast.LENGTH_SHORT).show();
+
             }
         });
 
