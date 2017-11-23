@@ -1,8 +1,13 @@
 package com.example.android.bluetoothlegatt;
 
 import android.app.Activity;
+import android.bluetooth.BluetoothAdapter;
+import android.bluetooth.BluetoothDevice;
+import android.bluetooth.BluetoothGatt;
+import android.bluetooth.BluetoothGattCallback;
 import android.bluetooth.BluetoothGattCharacteristic;
 import android.bluetooth.BluetoothGattService;
+import android.bluetooth.BluetoothProfile;
 import android.content.BroadcastReceiver;
 import android.content.ComponentName;
 import android.content.Context;
@@ -10,6 +15,7 @@ import android.content.Intent;
 import android.content.ServiceConnection;
 import android.os.Bundle;
 import android.os.Environment;
+import android.os.Handler;
 import android.os.IBinder;
 import android.support.annotation.Nullable;
 import android.util.Log;
@@ -42,6 +48,8 @@ import static android.content.ContentValues.TAG;
 public class AutoConnectActivity extends Activity {
     private BluetoothGattCharacteristic characteristic;
     private BluetoothGattCharacteristic characteristicCTRL2;
+    private BluetoothAdapter mBluetoothAdapter;
+    public BluetoothGatt mBluetoothGatt;
     private String address;
     private UUID serviceId;
     private UUID charId;
@@ -56,8 +64,17 @@ public class AutoConnectActivity extends Activity {
     private String Entry;
     private File file;
     private boolean check=true;
+    /*
+    private int mConnectionState = STATE_DISCONNECTED;
+    private static final int STATE_DISCONNECTED = 0;
+    private static final int STATE_CONNECTING = 1;
+    private static final int STATE_CONNECTED = 2;
+    public final static String ACTION_GATT_CONNECTED =
+            "com.example.bluetooth.le.ACTION_GATT_CONNECTED";
+    public final static String ACTION_GATT_DISCONNECTED =
+            "com.example.bluetooth.le.ACTION_GATT_DISCONNECTED";
 
-
+*/
     private BluetoothLeService mBluetoothLeService;
 
     private TimerTask timerTask = new TimerTask() {
@@ -101,6 +118,9 @@ public class AutoConnectActivity extends Activity {
             mBluetoothLeService.disconnect();
             Log.e(TAG, "not find device");
             debugText.setText("not find device");
+            if(debugText.toString().equals("not find device")){
+                mBluetoothLeService.connect(address);
+            }
         }
 
         @Override
@@ -153,11 +173,11 @@ public class AutoConnectActivity extends Activity {
 
         Intent intent1 = getIntent();
         address = intent1.getStringExtra("address");
-        Log.e(TAG, " Address: " + address);
+        //Log.e(TAG, " Address: " + address);
         serviceId = UUID.fromString(intent1.getStringExtra("service_id"));
-        Log.e(TAG, " serviceId: " + serviceId);
+        //Log.e(TAG, " serviceId: " + serviceId);
         charId = UUID.fromString(intent1.getStringExtra("character_id"));
-        Log.e(TAG, " charId: " + charId);
+        //Log.e(TAG, " charId: " + charId);
 
 
         ((TextView)findViewById(R.id.address_txt)).setText(address);
@@ -167,18 +187,19 @@ public class AutoConnectActivity extends Activity {
         startBtn = (Button)findViewById(R.id.start_btn);
         stopBtn = (Button)findViewById(R.id.stop_btn);
 
+
         ListView listView = (ListView)findViewById(R.id.result_list);
         adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1);
         listView.setAdapter(adapter);
 
 
-        //List<BluetoothGattService> services = gatt.getServices();
+
 
         startBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                check=true;
-                Log.e(TAG, " temp?: " + check);
+                //check=true;
+                //Log.e(TAG, " temp?: " + check);
 
                 //External Storage
                 String state;
@@ -193,17 +214,22 @@ public class AutoConnectActivity extends Activity {
 
                 }
                 mBluetoothLeService.connect(address);
-                if (check==true){
-                    timer.schedule(timerTask, 0, 1000 * 5); }//1000 => 1s   *600  => 10 min  3600=>1h}
-            }
-        });
+
+                    timer.schedule(timerTask, 0, 1000 * 5); }//1000 => 1s   *600  => 10 min  3600=>1h
+                });
+
+
+
+        //startBtn.performClick();
+
+        //Log.e(TAG, " click??: " + startBtn.performClick());
 
         stopBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
                 check=true;
-                Log.e(TAG, " temp stop?: " + check);
+                //Log.e(TAG, " temp stop?: " + check);
 
 
 
@@ -235,4 +261,5 @@ public class AutoConnectActivity extends Activity {
         super.onPause();
         unregisterReceiver(mGattUpdateReceiver);
     }
+
 }

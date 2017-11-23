@@ -338,14 +338,14 @@ public class DeviceControlActivity extends Activity {
             // Loops through available Characteristics.
             for (BluetoothGattCharacteristic gattCharacteristic : gattCharacteristics) {
                 charas.add(gattCharacteristic);
-                if ( gattCharacteristic.getUuid().equals(UUID.fromString(SampleGattAttributes.CTRL_2))){
+                if ( gattCharacteristic.getUuid().equals(UUID.fromString(SampleGattAttributes.TEMPERATURE_MEASUREMENT))){
                     Log.e(TAG, "GattCharacteristics= " + gattCharacteristic.getUuid());
                     Intent intent = new Intent(DeviceControlActivity.this, AutoConnectActivity.class);
                     intent.putExtra("character_id", "F000AA01-0451-4000-B000-000000000000");
                     intent.putExtra("service_id", "F000AA00-0451-4000-B000-000000000000");
                     intent.putExtra("address", mDeviceAddress);
-                    intent.putExtra("ctrl2_character_id", gattCharacteristic.getUuid().toString());
-                    intent.putExtra("ctrl2_service_id", gattCharacteristic.getService().getUuid().toString());
+                    //intent.putExtra("ctrl2_character_id", gattCharacteristic.getUuid().toString());
+                    //intent.putExtra("ctrl2_service_id", gattCharacteristic.getService().getUuid().toString());
                     startActivity(intent);
                 }
                 //Log.e(TAG, "GattCharacteristics= " + gattCharacteristic.getUuid());

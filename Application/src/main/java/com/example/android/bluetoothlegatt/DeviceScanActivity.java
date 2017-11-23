@@ -328,22 +328,24 @@ public class DeviceScanActivity extends ListActivity {
 
                     if (device.getAddress().toString().equals(inputAddress))
                     {
-                        Log.e(TAG, "enter loop?: " + device.getAddress().toString() );
+                        Log.e(TAG, "enter loop?: " + device.getAddress().toString().equals(inputAddress) );
                         final Intent newIntent = new Intent(DeviceScanActivity.this, DeviceControlActivity.class);
                         newIntent.putExtra(DeviceControlActivity.EXTRAS_DEVICE_NAME, device.getName().toString());
                         newIntent.putExtra(DeviceControlActivity.EXTRAS_DEVICE_ADDRESS, device.getAddress());
                         startActivity(newIntent);
                     }
-                    if (!device.getAddress().toString().equals(inputAddress) || device.getAddress()==null)
+                    if (!device.getAddress().toString().equals(inputAddress))// || device.getAddress()==null)
                     {
                         //Log.e(TAG, "enter loop2?: " + device.getName().toString().equals(inputAddress.toString()) );
                         //User Input-- Device Control-- AutoConnect
-                        final Intent newIntent = new Intent(DeviceScanActivity.this, AutoConnectActivity.class);
-                        newIntent.putExtra("address", inputAddress);
-                        newIntent.putExtra("character_id", "F000AA01-0451-4000-B000-000000000000");
-                        newIntent.putExtra("service_id", "F000AA00-0451-4000-B000-000000000000");
-                        newIntent.putExtra("ctrl2_character_id", "F0001112-0451-4000-B000-000000000000");
-                        newIntent.putExtra("ctrl2_service_id", "F0001110-0451-4000-B000-000000000000");
+                        final Intent newIntent = new Intent(DeviceScanActivity.this, DeviceControlActivity.class);
+                        //newIntent.putExtra("address", inputAddress);
+                        //newIntent.putExtra(DeviceControlActivity.EXTRAS_DEVICE_NAME, device.getName().toString());
+                        newIntent.putExtra(DeviceControlActivity.EXTRAS_DEVICE_ADDRESS, inputAddress);
+                        //newIntent.putExtra("character_id", "F000AA01-0451-4000-B000-000000000000");
+                        //newIntent.putExtra("service_id", "F000AA00-0451-4000-B000-000000000000");
+                        //newIntent.putExtra("ctrl2_character_id", "F0001112-0451-4000-B000-000000000000");
+                        //newIntent.putExtra("ctrl2_service_id", "F0001110-0451-4000-B000-000000000000");
                         startActivity(newIntent);
                     }
                     mLeDeviceListAdapter.addDevice(device, rssi);

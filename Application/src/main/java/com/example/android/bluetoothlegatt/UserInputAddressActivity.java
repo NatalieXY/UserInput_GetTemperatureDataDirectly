@@ -42,7 +42,8 @@ public class UserInputAddressActivity extends Activity {
         button1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 String mac_address = targetAddress.getText().toString();
-                Intent intent = new Intent(UserInputAddressActivity.this, AutoConnectActivity.class);
+                Intent intent = new Intent(UserInputAddressActivity.this, DeviceScanActivity.class);
+               // Intent intent = new Intent(UserInputAddressActivity.this, AutoConnectActivity.class);
                 intent.putExtra("character_id", "F000AA01-0451-4000-B000-000000000000");
                 intent.putExtra("service_id", "F000AA00-0451-4000-B000-000000000000");
                 intent.putExtra("ctrl2_character_id", "F0001112-0451-4000-B000-000000000000");
