@@ -67,7 +67,7 @@ public class AutoConnectActivity extends Activity {
     private ArrayAdapter<String> adapter;
     private String Entry;
     private File file;
-    private boolean check=true;
+    private boolean check=false;
 
     private BluetoothLeService mBluetoothLeService;
 
@@ -119,6 +119,17 @@ public class AutoConnectActivity extends Activity {
 
                 List<BluetoothGattService> list = mBluetoothLeService.getSupportedGattServices();
                 for(BluetoothGattService s : list) {
+                    if (check==true){
+                        if (s.getUuid().compareTo(LEDserviceId) == 0) {
+
+                            characteristic = s.getCharacteristic(LEDcharId);
+                            Log.e(TAG, " characteristic temp?: " + s.getCharacteristic(LEDcharId));
+                            mBluetoothLeService.disconnect();
+
+
+                            return;
+                        }
+                    }
                     if (s.getUuid().compareTo(serviceId) == 0) {
 
                         characteristic = s.getCharacteristic(charId);
@@ -128,6 +139,7 @@ public class AutoConnectActivity extends Activity {
 
                         return;
                     }
+
                 }
 
 
@@ -151,8 +163,11 @@ public class AutoConnectActivity extends Activity {
             final String action = intent.getAction();
             debugText.setText(action);
             if (BluetoothLeService.ACTION_GATT_CONNECTED.equals(action)) {
-                    mBluetoothLeService.readCharacteristic(characteristic);
 
+                    mBluetoothLeService.readCharacteristic(characteristic);
+                    if(check==true){
+                        turnLEDon();
+                    }
 
             } else if (BluetoothLeService.ACTION_GATT_DISCONNECTED.equals(action)) {
             } else if (BluetoothLeService.ACTION_GATT_SERVICES_DISCOVERED.equals(action)) {
@@ -217,8 +232,7 @@ public class AutoConnectActivity extends Activity {
         startBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //check=true;
-                //Log.e(TAG, " temp?: " + check);
+
 
                 //External Storage
                 String state;
@@ -242,8 +256,6 @@ public class AutoConnectActivity extends Activity {
             @Override
             public void onClick(View v) {
 
-                check=true;
-                //Log.e(TAG, " temp stop?: " + check);
 
 
 
@@ -259,7 +271,7 @@ public class AutoConnectActivity extends Activity {
             public void onClick(View v)
             {
                 mBluetoothLeService.connect(address);
-
+                check=true;
 
 
 
@@ -275,7 +287,7 @@ public class AutoConnectActivity extends Activity {
             @Override
 
             public void onClick(View v) {
-                //mBluetoothLeService.connect(address);
+
 
                 turnLEDoff();
                 Log.e(TAG, " Off?: " + turnLEDoff());
