@@ -1,4 +1,4 @@
-package bluetooth.newService;
+package bluetooth.promise;
 
 /**
  * Promise<T> represent the future value in type T

@@ -1,9 +1,8 @@
-package bluetooth.newService;
+package bluetooth.promise;
 
 import android.os.AsyncTask;
 
 import java.util.concurrent.ConcurrentLinkedQueue;
-import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.atomic.AtomicReference;
 
